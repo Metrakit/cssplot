@@ -6,15 +6,15 @@ prepare: clean
 	@echo "[!] build/ directory created"
 
 base:
-	@lessc src/cssplot.base.less > build/cssplot.base.css
+	@lessc src/less/cssplot.base.less > build/cssplot.base.css
 	@echo "[!] cssplot.base.css generated"
 
 full:
-	@lessc src/cssplot.full.less > build/cssplot.full.css
+	@lessc src/less/cssplot.full.less > build/cssplot.full.css
 	@echo "[!] cssplot.full.css generated"
 
 group:
-	@lessc src/cssplot.group.less > build/cssplot.group.css
+	@lessc src/less/cssplot.group.less > build/cssplot.group.css
 	@echo "[!] cssplot.group.css generated"
 
 clean:
