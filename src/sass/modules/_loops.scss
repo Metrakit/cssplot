@@ -1,12 +1,12 @@
 @mixin height_loop($max: 100) {
   @for $i from 0 through $max {
-      [data-cp-size="#{$i}"] { height: #{$i}px; };
+      [data-cp-size="#{$i}"] { height: unquote($i + '%'); };
   }
 }
 
 @mixin width_loop($max: 100) {
   @for $i from 0 through $max {
-      [data-cp-size="#{$i}"] { width: #{$i}px; };
+      [data-cp-size="#{$i}"] { width: unquote($i + '%'); };
   }
 }
 
