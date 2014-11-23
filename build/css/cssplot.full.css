@@ -1,90 +1,1710 @@
-/*
-Error: Invalid CSS after "    background: ": expected expression (e.g. 1px, bold), was "@chart-primary-..."
-        on line 36 of C:/Users/j.jouffroy/Documents/cssplot/src/sass/modules/_base.scss
-        from line 2 of C:/Users/j.jouffroy/Documents/cssplot/src/sass/cssplot.full.scss
+/* line 1, ../../src/sass/modules/_base.scss */
+.column-chart, .bar-chart, .scatter-plot {
+  position: relative;
+  min-width: 100px;
+  min-height: 100px;
+  padding: 0;
+  margin: 0;
+}
 
-31: 
-32: .column-chart .chart-column,
-33: .bar-chart .chart-row,
-34: .column-chart [data-cp-size],
-35: .bar-chart [data-cp-size] {
-36:     background: @chart-primary-color;
-37:     color: @chart-primary-label-color;
-38:     list-style: none;
-39:     border: 1px solid @chart-primary-border-color;
-40:     box-sizing: border-box;
-41: }
+/* line 9, ../../src/sass/modules/_base.scss */
+.column-chart .plot-container {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 0;
+  margin: 0;
+  min-height: 100px;
+}
 
-Backtrace:
-C:/Users/j.jouffroy/Documents/cssplot/src/sass/modules/_base.scss:36
-C:/Users/j.jouffroy/Documents/cssplot/src/sass/cssplot.full.scss:2
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:1165:in `expected'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/script/lexer.rb:220:in `expected!'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/script/parser.rb:572:in `assert_expr'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/script/parser.rb:62:in `parse'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:1025:in `send'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:1025:in `sass_script'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:878:in `value!'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:753:in `try_declaration'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:1139:in `call'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:1139:in `rethrow'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:766:in `try_declaration'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:696:in `declaration_or_ruleset'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:661:in `block_child'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:650:in `block_contents'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:642:in `block'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:636:in `ruleset'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:660:in `block_child'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:653:in `block_contents'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:117:in `stylesheet'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/scss/parser.rb:42:in `parse'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/engine.rb:393:in `_to_tree'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/engine.rb:299:in `to_tree'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:313:in `visit_import'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:312:in `visit_import'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `send'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:167:in `visit_children'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `send'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `send'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/engine.rb:268:in `render'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:491:in `update_stylesheet'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:215:in `update_stylesheets'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby187/lib/ruby/gems/1.8/gems/sass-3.4.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/lib/compass/sass_compiler.rb:40:in `compile!'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/lib/compass/commands/update_project.rb:49:in `perform'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/lib/compass/commands/base.rb:18:in `execute'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/bin/compass:30
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/bin/compass:44:in `call'
-C:/Ruby187/lib/ruby/gems/1.8/gems/compass-1.0.1/bin/compass:44
-C:/Ruby187/bin/compass:23:in `load'
-C:/Ruby187/bin/compass:23
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    background: \": expected expression (e.g. 1px, bold), was \"@chart-primary-...\"\A         on line 36 of C:/Users/j.jouffroy/Documents/cssplot/src/sass/modules/_base.scss\A         from line 2 of C:/Users/j.jouffroy/Documents/cssplot/src/sass/cssplot.full.scss\A \A 31: \A 32: .column-chart .chart-column,\A 33: .bar-chart .chart-row,\A 34: .column-chart [data-cp-size],\A 35: .bar-chart [data-cp-size] {\A 36:     background: @chart-primary-color;\A 37:     color: @chart-primary-label-color;\A 38:     list-style: none;\A 39:     border: 1px solid @chart-primary-border-color;\A 40:     box-sizing: border-box;\A 41: }"; }
+/* line 25, ../../src/sass/modules/_base.scss */
+.column-chart .chart-column,
+.column-chart [data-cp-size] {
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+
+/* line 35, ../../src/sass/modules/_base.scss */
+.column-chart .chart-column,
+.bar-chart .chart-row,
+.column-chart [data-cp-size],
+.bar-chart [data-cp-size] {
+  background: #3498db;
+  color: white;
+  list-style: none;
+  border: 1px solid white;
+  box-sizing: border-box;
+}
+
+/* line 43, ../../src/sass/modules/_base.scss */
+.bar-chart {
+  clear: both;
+}
+
+/* line 47, ../../src/sass/modules/_base.scss */
+.bar-chart .plot-container {
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+/* line 55, ../../src/sass/modules/_base.scss */
+.bar-chart .chart-row,
+.bar-chart [data-cp-size] {
+  min-height: 8px;
+}
+
+/* line 59, ../../src/sass/modules/_base.scss */
+.scatter-plot .plot-container {
+  position: absolute;
+  top: 12 px;
+  right: 12 px;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 70, ../../src/sass/modules/_base.scss */
+.scatter-plot .chart-dot,
+.scatter-plot .chart-dot,
+.scatter-plot [data-cp-x],
+.scatter-plot [data-cp-y] {
+  position: absolute;
+  height: 0;
+  width: 0;
+  list-style: none;
+  overflow: hidden;
+  border: 6 px solid #3498db;
+  border-radius: 100%;
+}
+
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="0"] {
+  height: 0px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="1"] {
+  height: 1px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="2"] {
+  height: 2px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="3"] {
+  height: 3px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="4"] {
+  height: 4px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="5"] {
+  height: 5px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="6"] {
+  height: 6px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="7"] {
+  height: 7px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="8"] {
+  height: 8px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="9"] {
+  height: 9px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="10"] {
+  height: 10px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="11"] {
+  height: 11px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="12"] {
+  height: 12px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="13"] {
+  height: 13px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="14"] {
+  height: 14px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="15"] {
+  height: 15px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="16"] {
+  height: 16px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="17"] {
+  height: 17px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="18"] {
+  height: 18px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="19"] {
+  height: 19px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="20"] {
+  height: 20px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="21"] {
+  height: 21px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="22"] {
+  height: 22px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="23"] {
+  height: 23px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="24"] {
+  height: 24px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="25"] {
+  height: 25px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="26"] {
+  height: 26px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="27"] {
+  height: 27px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="28"] {
+  height: 28px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="29"] {
+  height: 29px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="30"] {
+  height: 30px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="31"] {
+  height: 31px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="32"] {
+  height: 32px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="33"] {
+  height: 33px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="34"] {
+  height: 34px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="35"] {
+  height: 35px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="36"] {
+  height: 36px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="37"] {
+  height: 37px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="38"] {
+  height: 38px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="39"] {
+  height: 39px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="40"] {
+  height: 40px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="41"] {
+  height: 41px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="42"] {
+  height: 42px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="43"] {
+  height: 43px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="44"] {
+  height: 44px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="45"] {
+  height: 45px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="46"] {
+  height: 46px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="47"] {
+  height: 47px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="48"] {
+  height: 48px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="49"] {
+  height: 49px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="50"] {
+  height: 50px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="51"] {
+  height: 51px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="52"] {
+  height: 52px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="53"] {
+  height: 53px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="54"] {
+  height: 54px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="55"] {
+  height: 55px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="56"] {
+  height: 56px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="57"] {
+  height: 57px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="58"] {
+  height: 58px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="59"] {
+  height: 59px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="60"] {
+  height: 60px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="61"] {
+  height: 61px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="62"] {
+  height: 62px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="63"] {
+  height: 63px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="64"] {
+  height: 64px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="65"] {
+  height: 65px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="66"] {
+  height: 66px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="67"] {
+  height: 67px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="68"] {
+  height: 68px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="69"] {
+  height: 69px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="70"] {
+  height: 70px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="71"] {
+  height: 71px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="72"] {
+  height: 72px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="73"] {
+  height: 73px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="74"] {
+  height: 74px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="75"] {
+  height: 75px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="76"] {
+  height: 76px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="77"] {
+  height: 77px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="78"] {
+  height: 78px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="79"] {
+  height: 79px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="80"] {
+  height: 80px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="81"] {
+  height: 81px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="82"] {
+  height: 82px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="83"] {
+  height: 83px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="84"] {
+  height: 84px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="85"] {
+  height: 85px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="86"] {
+  height: 86px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="87"] {
+  height: 87px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="88"] {
+  height: 88px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="89"] {
+  height: 89px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="90"] {
+  height: 90px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="91"] {
+  height: 91px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="92"] {
+  height: 92px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="93"] {
+  height: 93px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="94"] {
+  height: 94px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="95"] {
+  height: 95px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="96"] {
+  height: 96px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="97"] {
+  height: 97px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="98"] {
+  height: 98px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="99"] {
+  height: 99px;
+}
+/* line 3, ../../src/sass/modules/_loops.scss */
+.column-chart .plot-container [data-cp-size="100"] {
+  height: 100px;
+}
+
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="0"] {
+  width: 0px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="1"] {
+  width: 1px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="2"] {
+  width: 2px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="3"] {
+  width: 3px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="4"] {
+  width: 4px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="5"] {
+  width: 5px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="6"] {
+  width: 6px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="7"] {
+  width: 7px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="8"] {
+  width: 8px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="9"] {
+  width: 9px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="10"] {
+  width: 10px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="11"] {
+  width: 11px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="12"] {
+  width: 12px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="13"] {
+  width: 13px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="14"] {
+  width: 14px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="15"] {
+  width: 15px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="16"] {
+  width: 16px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="17"] {
+  width: 17px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="18"] {
+  width: 18px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="19"] {
+  width: 19px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="20"] {
+  width: 20px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="21"] {
+  width: 21px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="22"] {
+  width: 22px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="23"] {
+  width: 23px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="24"] {
+  width: 24px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="25"] {
+  width: 25px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="26"] {
+  width: 26px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="27"] {
+  width: 27px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="28"] {
+  width: 28px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="29"] {
+  width: 29px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="30"] {
+  width: 30px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="31"] {
+  width: 31px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="32"] {
+  width: 32px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="33"] {
+  width: 33px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="34"] {
+  width: 34px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="35"] {
+  width: 35px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="36"] {
+  width: 36px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="37"] {
+  width: 37px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="38"] {
+  width: 38px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="39"] {
+  width: 39px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="40"] {
+  width: 40px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="41"] {
+  width: 41px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="42"] {
+  width: 42px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="43"] {
+  width: 43px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="44"] {
+  width: 44px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="45"] {
+  width: 45px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="46"] {
+  width: 46px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="47"] {
+  width: 47px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="48"] {
+  width: 48px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="49"] {
+  width: 49px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="50"] {
+  width: 50px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="51"] {
+  width: 51px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="52"] {
+  width: 52px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="53"] {
+  width: 53px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="54"] {
+  width: 54px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="55"] {
+  width: 55px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="56"] {
+  width: 56px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="57"] {
+  width: 57px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="58"] {
+  width: 58px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="59"] {
+  width: 59px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="60"] {
+  width: 60px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="61"] {
+  width: 61px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="62"] {
+  width: 62px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="63"] {
+  width: 63px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="64"] {
+  width: 64px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="65"] {
+  width: 65px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="66"] {
+  width: 66px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="67"] {
+  width: 67px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="68"] {
+  width: 68px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="69"] {
+  width: 69px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="70"] {
+  width: 70px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="71"] {
+  width: 71px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="72"] {
+  width: 72px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="73"] {
+  width: 73px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="74"] {
+  width: 74px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="75"] {
+  width: 75px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="76"] {
+  width: 76px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="77"] {
+  width: 77px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="78"] {
+  width: 78px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="79"] {
+  width: 79px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="80"] {
+  width: 80px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="81"] {
+  width: 81px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="82"] {
+  width: 82px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="83"] {
+  width: 83px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="84"] {
+  width: 84px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="85"] {
+  width: 85px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="86"] {
+  width: 86px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="87"] {
+  width: 87px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="88"] {
+  width: 88px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="89"] {
+  width: 89px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="90"] {
+  width: 90px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="91"] {
+  width: 91px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="92"] {
+  width: 92px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="93"] {
+  width: 93px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="94"] {
+  width: 94px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="95"] {
+  width: 95px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="96"] {
+  width: 96px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="97"] {
+  width: 97px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="98"] {
+  width: 98px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="99"] {
+  width: 99px;
+}
+/* line 9, ../../src/sass/modules/_loops.scss */
+.bar-chart .plot-container [data-cp-size="100"] {
+  width: 100px;
+}
+
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="0"] {
+  left: 0%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="1"] {
+  left: 1%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="2"] {
+  left: 2%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="3"] {
+  left: 3%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="4"] {
+  left: 4%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="5"] {
+  left: 5%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="6"] {
+  left: 6%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="7"] {
+  left: 7%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="8"] {
+  left: 8%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="9"] {
+  left: 9%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="10"] {
+  left: 10%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="11"] {
+  left: 11%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="12"] {
+  left: 12%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="13"] {
+  left: 13%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="14"] {
+  left: 14%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="15"] {
+  left: 15%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="16"] {
+  left: 16%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="17"] {
+  left: 17%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="18"] {
+  left: 18%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="19"] {
+  left: 19%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="20"] {
+  left: 20%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="21"] {
+  left: 21%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="22"] {
+  left: 22%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="23"] {
+  left: 23%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="24"] {
+  left: 24%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="25"] {
+  left: 25%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="26"] {
+  left: 26%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="27"] {
+  left: 27%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="28"] {
+  left: 28%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="29"] {
+  left: 29%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="30"] {
+  left: 30%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="31"] {
+  left: 31%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="32"] {
+  left: 32%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="33"] {
+  left: 33%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="34"] {
+  left: 34%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="35"] {
+  left: 35%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="36"] {
+  left: 36%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="37"] {
+  left: 37%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="38"] {
+  left: 38%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="39"] {
+  left: 39%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="40"] {
+  left: 40%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="41"] {
+  left: 41%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="42"] {
+  left: 42%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="43"] {
+  left: 43%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="44"] {
+  left: 44%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="45"] {
+  left: 45%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="46"] {
+  left: 46%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="47"] {
+  left: 47%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="48"] {
+  left: 48%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="49"] {
+  left: 49%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="50"] {
+  left: 50%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="51"] {
+  left: 51%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="52"] {
+  left: 52%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="53"] {
+  left: 53%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="54"] {
+  left: 54%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="55"] {
+  left: 55%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="56"] {
+  left: 56%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="57"] {
+  left: 57%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="58"] {
+  left: 58%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="59"] {
+  left: 59%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="60"] {
+  left: 60%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="61"] {
+  left: 61%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="62"] {
+  left: 62%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="63"] {
+  left: 63%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="64"] {
+  left: 64%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="65"] {
+  left: 65%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="66"] {
+  left: 66%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="67"] {
+  left: 67%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="68"] {
+  left: 68%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="69"] {
+  left: 69%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="70"] {
+  left: 70%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="71"] {
+  left: 71%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="72"] {
+  left: 72%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="73"] {
+  left: 73%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="74"] {
+  left: 74%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="75"] {
+  left: 75%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="76"] {
+  left: 76%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="77"] {
+  left: 77%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="78"] {
+  left: 78%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="79"] {
+  left: 79%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="80"] {
+  left: 80%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="81"] {
+  left: 81%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="82"] {
+  left: 82%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="83"] {
+  left: 83%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="84"] {
+  left: 84%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="85"] {
+  left: 85%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="86"] {
+  left: 86%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="87"] {
+  left: 87%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="88"] {
+  left: 88%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="89"] {
+  left: 89%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="90"] {
+  left: 90%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="91"] {
+  left: 91%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="92"] {
+  left: 92%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="93"] {
+  left: 93%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="94"] {
+  left: 94%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="95"] {
+  left: 95%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="96"] {
+  left: 96%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="97"] {
+  left: 97%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="98"] {
+  left: 98%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="99"] {
+  left: 99%;
+}
+/* line 16, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-x="100"] {
+  left: 100%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="0"] {
+  bottom: 0%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="1"] {
+  bottom: 1%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="2"] {
+  bottom: 2%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="3"] {
+  bottom: 3%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="4"] {
+  bottom: 4%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="5"] {
+  bottom: 5%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="6"] {
+  bottom: 6%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="7"] {
+  bottom: 7%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="8"] {
+  bottom: 8%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="9"] {
+  bottom: 9%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="10"] {
+  bottom: 10%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="11"] {
+  bottom: 11%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="12"] {
+  bottom: 12%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="13"] {
+  bottom: 13%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="14"] {
+  bottom: 14%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="15"] {
+  bottom: 15%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="16"] {
+  bottom: 16%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="17"] {
+  bottom: 17%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="18"] {
+  bottom: 18%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="19"] {
+  bottom: 19%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="20"] {
+  bottom: 20%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="21"] {
+  bottom: 21%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="22"] {
+  bottom: 22%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="23"] {
+  bottom: 23%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="24"] {
+  bottom: 24%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="25"] {
+  bottom: 25%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="26"] {
+  bottom: 26%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="27"] {
+  bottom: 27%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="28"] {
+  bottom: 28%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="29"] {
+  bottom: 29%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="30"] {
+  bottom: 30%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="31"] {
+  bottom: 31%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="32"] {
+  bottom: 32%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="33"] {
+  bottom: 33%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="34"] {
+  bottom: 34%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="35"] {
+  bottom: 35%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="36"] {
+  bottom: 36%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="37"] {
+  bottom: 37%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="38"] {
+  bottom: 38%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="39"] {
+  bottom: 39%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="40"] {
+  bottom: 40%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="41"] {
+  bottom: 41%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="42"] {
+  bottom: 42%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="43"] {
+  bottom: 43%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="44"] {
+  bottom: 44%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="45"] {
+  bottom: 45%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="46"] {
+  bottom: 46%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="47"] {
+  bottom: 47%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="48"] {
+  bottom: 48%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="49"] {
+  bottom: 49%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="50"] {
+  bottom: 50%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="51"] {
+  bottom: 51%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="52"] {
+  bottom: 52%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="53"] {
+  bottom: 53%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="54"] {
+  bottom: 54%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="55"] {
+  bottom: 55%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="56"] {
+  bottom: 56%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="57"] {
+  bottom: 57%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="58"] {
+  bottom: 58%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="59"] {
+  bottom: 59%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="60"] {
+  bottom: 60%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="61"] {
+  bottom: 61%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="62"] {
+  bottom: 62%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="63"] {
+  bottom: 63%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="64"] {
+  bottom: 64%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="65"] {
+  bottom: 65%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="66"] {
+  bottom: 66%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="67"] {
+  bottom: 67%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="68"] {
+  bottom: 68%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="69"] {
+  bottom: 69%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="70"] {
+  bottom: 70%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="71"] {
+  bottom: 71%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="72"] {
+  bottom: 72%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="73"] {
+  bottom: 73%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="74"] {
+  bottom: 74%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="75"] {
+  bottom: 75%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="76"] {
+  bottom: 76%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="77"] {
+  bottom: 77%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="78"] {
+  bottom: 78%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="79"] {
+  bottom: 79%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="80"] {
+  bottom: 80%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="81"] {
+  bottom: 81%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="82"] {
+  bottom: 82%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="83"] {
+  bottom: 83%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="84"] {
+  bottom: 84%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="85"] {
+  bottom: 85%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="86"] {
+  bottom: 86%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="87"] {
+  bottom: 87%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="88"] {
+  bottom: 88%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="89"] {
+  bottom: 89%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="90"] {
+  bottom: 90%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="91"] {
+  bottom: 91%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="92"] {
+  bottom: 92%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="93"] {
+  bottom: 93%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="94"] {
+  bottom: 94%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="95"] {
+  bottom: 95%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="96"] {
+  bottom: 96%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="97"] {
+  bottom: 97%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="98"] {
+  bottom: 98%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="99"] {
+  bottom: 99%;
+}
+/* line 22, ../../src/sass/modules/_loops.scss */
+.scatter-plot .plot-container [data-cp-y="100"] {
+  bottom: 100%;
+}

@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['compass', 'watch']);
+	grunt.registerTask('default', ['compass']);
 	grunt.registerTask('dev', ['compass', 'watch']);
 	grunt.registerTask('prod', ['compass', 'cssmin']);
 
