@@ -7,7 +7,17 @@
   margin: 0;
 }
 
-/* line 9, ../src/sass/modules/_base.scss */
+/* line 13, ../src/sass/modules/_base.scss */
+.column-chart .chart-column,
+.bar-chart .chart-row,
+.column-chart [data-cp-size],
+.bar-chart [data-cp-size],
+.plot-container > * > * {
+  list-style: none;
+  border: 1px solid #ffffff;
+}
+
+/* line 18, ../src/sass/modules/_base.scss */
 .column-chart .plot-container {
   display: -webkit-flex;
   display: flex;
@@ -26,33 +36,51 @@
   min-height: 100px;
 }
 
-/* line 25, ../src/sass/modules/_base.scss */
+/* line 33, ../src/sass/modules/_base.scss */
+.column-chart.stacked > * > * {
+  height: 100%;
+  -webkit-transform: scaleY(-1);
+  -moz-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+/* line 38, ../src/sass/modules/_base.scss */
+.column-chart.stacked .group-by-number [data-cp-size] {
+  -webkit-transform: scaleY(-1);
+  -moz-transform: scaleY(-1);
+  -ms-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+/* line 44, ../src/sass/modules/_base.scss */
 .column-chart .chart-column,
-.column-chart [data-cp-size] {
+.column-chart [data-cp-size],
+.column-chart.stacked > * > * {
   -webkit-flex-grow: 1;
   flex-grow: 1;
   -webkit-align-self: flex-end;
   align-self: flex-end;
 }
 
-/* line 35, ../src/sass/modules/_base.scss */
+/* line 54, ../src/sass/modules/_base.scss */
 .column-chart .chart-column,
 .bar-chart .chart-row,
 .column-chart [data-cp-size],
 .bar-chart [data-cp-size] {
   background: #3498db;
   color: white;
-  list-style: none;
-  border: 1px solid white;
   box-sizing: border-box;
 }
 
-/* line 43, ../src/sass/modules/_base.scss */
+/* line 60, ../src/sass/modules/_base.scss */
 .bar-chart {
   clear: both;
 }
 
-/* line 47, ../src/sass/modules/_base.scss */
+/* line 64, ../src/sass/modules/_base.scss */
 .bar-chart .plot-container {
   flex-direction: row;
   padding: 0;
@@ -60,13 +88,23 @@
   width: 100%;
 }
 
-/* line 55, ../src/sass/modules/_base.scss */
+/* line 72, ../src/sass/modules/_base.scss */
 .bar-chart .chart-row,
 .bar-chart [data-cp-size] {
   min-height: 8px;
 }
 
-/* line 59, ../src/sass/modules/_base.scss */
+/* line 76, ../src/sass/modules/_base.scss */
+.bar-chart.stacked > * > * {
+  display: flex;
+}
+
+/* line 80, ../src/sass/modules/_base.scss */
+.bar-chart.stacked .group-by-number [data-cp-size] {
+  display: inline-block;
+}
+
+/* line 84, ../src/sass/modules/_base.scss */
 .scatter-plot .plot-container {
   position: absolute;
   top: 12 px;
@@ -76,7 +114,7 @@
   padding: 0;
 }
 
-/* line 70, ../src/sass/modules/_base.scss */
+/* line 95, ../src/sass/modules/_base.scss */
 .scatter-plot .chart-dot,
 .scatter-plot .chart-dot,
 .scatter-plot [data-cp-x],
