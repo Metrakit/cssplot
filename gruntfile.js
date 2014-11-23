@@ -8,7 +8,7 @@ module.exports = function(grunt) {
 		    scss: {
 		      options: {
 		        sassDir: 'src/sass',
-        		cssDir: 'build/css',
+        		cssDir: 'build',
 		      }
 		    }
 		},
