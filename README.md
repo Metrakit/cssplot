@@ -1,6 +1,6 @@
 # Cssplot with SASS
 
-A Cssplot adaption with SASS. Charts in fully CSS.
+A Cssplot adaptation with SASS. Charts in fully CSS.
 
 ## Official link (with LESS) and Documentation : https://github.com/asciimoo/cssplot
 
